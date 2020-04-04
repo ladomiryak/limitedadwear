@@ -1,0 +1,43 @@
+.out {
+    background-color: $gold;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        text-align: center;
+        padding: 10px 0;
+        width: 90%;
+        font-family: 'Proxima-light', serif;
+        font-size: 12px;
+        line-height: 1.33;
+
+        &_footer {
+            color: $white;
+        }
+    }
+    
+    &__phrase {
+        color: $blue;
+        text-transform: uppercase;
+
+        &_bold {
+            font-family: Proxima-semibold, serif;
+        }
+    }
+
+    &__close {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-image: url(../icons/close.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        align-content: right;
+        cursor: pointer;
+    }
+}

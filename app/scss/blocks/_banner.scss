@@ -1,0 +1,64 @@
+.banner {
+    margin-bottom: 16px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba($grey, .4);
+
+    &__wrapper {
+        background-image: url("http://placekitten.com/1146/612");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 120px 0;
+        cursor: pointer;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__sale {
+        border: 15px solid $gold;
+        background-color: rgba($blue, .4);
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-family: 'Proxima-thinlt', serif;
+            font-size: 60px;
+            letter-spacing: 5.96px;
+            color:$white;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        font-family: 'Proxima-thinlt', serif;
+        font-size: 30px;
+        line-height: 1.45;
+        letter-spacing: 2.64px;
+        text-align: center;
+        width: 293px;
+        color: $black;
+        text-transform: uppercase;
+
+        &_block {
+            display: block;
+            color: $blue;
+            font-size: 60px;
+            font-family: 'Proxima-semibold', serif;
+        }
+
+        &_bg {
+            display: block;
+            color: $white;
+            background-color: $gold;
+        }
+    }
+}

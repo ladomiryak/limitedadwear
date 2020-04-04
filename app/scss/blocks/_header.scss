@@ -1,0 +1,57 @@
+.header {
+    margin: 10px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__logo {
+        max-width: 177px;
+        margin-left: 25px;
+    }
+
+    &__navigation {
+        display: flex;
+    }
+
+    &__menu {
+        display: none;
+        
+        &_active {
+            display: flex;
+            flex-direction: column;
+        }
+        a {
+            font-family: Proxima-light;
+            font-size: 10px;
+            color: $blue;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $gold;
+            }
+        }
+    }
+
+    &__cart {
+        margin-left: 10px;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+            width: 30px;
+            height: 26px;
+        }
+
+        span {
+            display: none;
+        }
+    }
+
+    &__login {
+        border-right: 2px dotted $blue;
+    }
+
+}

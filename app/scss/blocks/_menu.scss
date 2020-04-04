@@ -1,0 +1,112 @@
+.menu {
+    position: relative;
+    
+    &__nav {
+        background-color: rgba($blue, .6);
+        width: 70%;
+        height: 100vh;
+        padding: 25px;
+        position: absolute;
+        left: 0;
+        overflow:hidden;
+        transform: translateX(-150%);
+        transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition-delay: .1s;
+        z-index: 1;
+
+        .menu__sublist {
+            display: none;
+            margin-left: 15px;
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            display: block;
+        }
+
+        a {
+            font-family: 'Proxima-light', serif;
+            font-size: 18px;
+            color: $black2;
+            text-transform: uppercase;
+            text-decoration: none;
+            line-height: 5;
+            position: relative;
+            transition: all .3s cubic-bezier(.2, 0, 0, 1);
+            z-index: 1;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 1.25rem;
+                left: .25rem;
+                background-color: $gold;
+                transition: all .8s cubic-bezier(.2, 0, 0, 1);
+                transform-origin: bottom center;
+                z-index: -1;
+            }
+            
+            &:hover {
+                color: $black2;
+                
+                &:after {
+                    right: 0;
+                    left: 0;
+                    height: 100%;
+                }
+            }
+        }
+
+        &_active {
+            transform: translateX(0);
+        }
+    }
+
+    .header__menu {
+        a {
+            font-size: 14px;
+            line-height: 3;
+            margin-right: 4px;
+        }
+    }
+
+    .hamburger {
+        width: 20px;
+        position: absolute;
+        top: -32px;
+        left: 5px;
+        cursor: pointer;
+
+        span {
+            display: block;
+            border-bottom: 4px solid $blue;
+            margin-bottom: 3px;
+        }
+
+        &_active {
+            span {
+                margin-bottom: -2px;
+    
+                &:nth-child(1) {
+                    transform: translateY(4px) rotate(-45deg);
+                }
+    
+                &:nth-child(2) {
+                    display: none;
+                }
+    
+                &:nth-child(3) {
+                    transform: translateY(2px) rotate(45deg);
+                }
+            }
+        }
+    }
+}

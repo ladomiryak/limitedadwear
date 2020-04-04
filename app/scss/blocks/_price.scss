@@ -1,0 +1,34 @@
+.price {
+    font-family: 'Proxima', serif;
+
+    &__new {
+        font-size: 24px;
+        color: $pink;
+    }
+
+    &__old {
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+        color: $grey;
+
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 50%;
+            width: 100%;
+            border-bottom: 1px solid $grey;
+            transform: translateY(0px) rotate(-16deg);
+        } 
+    }
+
+    &__offer {
+        display: block;
+        color: $pink;
+        background-color: rgba($gold, .1);
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}

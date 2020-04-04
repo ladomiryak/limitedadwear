@@ -1,0 +1,53 @@
+@import 'libs/reset';
+@import 'base/fonts-mixin';
+@import 'base/variables';
+@import 'libs/fonts';
+@import 'libs/number_plugin';
+@import 'base/media-quaery_mixin';
+@import 'libs/slick-theme';
+@import 'libs/slick';
+@import 'blocks/out';
+@import 'blocks/header';
+@import 'blocks/search';
+@import 'blocks/menu';
+@import 'blocks/product';
+@import 'blocks/price';
+@import 'blocks/color&size';
+@import 'blocks/buttons';
+@import 'blocks/tabs';
+@import 'blocks/recomendation';
+@import 'blocks/banner';
+@import 'blocks/footer';
+
+* {
+    box-sizing: border-box;
+
+    img {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@include respond-to('small') {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@include respond-to('medium') {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+@include respond-to('large') {
+    .container {
+        padding: 0;
+    }
+}
